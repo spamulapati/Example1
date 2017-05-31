@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-17T19:05:31 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comintegrate" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="b70ee122-5639-49be-875e-d504ae654493">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CompanyDetails.xml"/>
+	<subDataset name="Subdataset_List" uuid="b7fcc555-ed33-4612-a7a8-804b1356c331">
+		<parameter name="IMG_PATH" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="flagKeyTerm" class="java.lang.String">
+			<fieldDescription><![CDATA[_THIS]]></fieldDescription>
+		</field>
+		<filterExpression><![CDATA[Boolean.TRUE]]></filterExpression>
+	</subDataset>
+	<parameter name="COMPANY_NAME" class="java.lang.String" nestedType="" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGE_PATH" class="java.lang.String" nestedType="" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\1335\\marigold-services\\core\\src\\main\\webapp\\reports\\client-reports\\images\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="risk_score" class="java.lang.Integer" nestedType="" isForPrompting="false">
+		<defaultValueExpression><![CDATA[90]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="flaggedKeyTerms" class="java.util.List"/>
+	<field name="numberAlertsLast7Days" class="java.lang.Integer"/>
+	<field name="numberFactsLast7Days" class="java.lang.Integer"/>
+	<field name="riskScoreMeta" class="com.deloitte.marigold.domain.RiskScoreMeta"/>
+	<field name="subsidiaries" class="java.util.List"/>
+	<field name="portfolioList" class="java.util.List"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="primaryIndustryCodes" class="java.util.List"/>
+	<field name="secondaryIndustryCodes" class="java.util.List"/>
+	<field name="keyCompetitors" class="java.util.List"/>
+	<field name="companyHistory" class="java.lang.String"/>
+	<field name="salesByLocation" class="java.lang.String"/>
+	<field name="salesByOperation" class="java.lang.String"/>
+	<field name="lastAnnualFinancialStatement" class="com.deloitte.marigold.beans.FinancialInfo"/>
+	<field name="lastInterimFinancialStatement" class="com.deloitte.marigold.beans.FinancialInfo"/>
+	<field name="shareholders" class="java.util.List"/>
+	<field name="overview" class="java.lang.String"/>
+	<field name="netProfit" class="java.math.BigDecimal"/>
+	<field name="marketCap" class="java.math.BigDecimal"/>
+	<field name="address" class="com.deloitte.marigold.beans.Address"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="priority" class="java.lang.Integer"/>
+	<field name="region" class="java.lang.String"/>
+	<field name="identifiers" class="java.util.List"/>
+	<field name="doingBusinessAs" class="java.lang.String"/>
+	<field name="globalParentDuns" class="java.lang.String"/>
+	<field name="tickerExchange" class="java.lang.String"/>
+	<field name="parentIdentifiers" class="java.util.List"/>
+	<field name="globalParentName" class="java.lang.String"/>
+	<field name="hierarchyDesignation" class="java.lang.String"/>
+	<field name="supplyChainDetails" class="com.deloitte.marigold.beans.SupplyChainDetails"/>
+	<field name="companyReportAvailable" class="java.lang.Boolean"/>
+	<field name="executivesChangeFlag" class="java.lang.String"/>
+	<field name="partOfPortfolio" class="java.lang.Boolean"/>
+	<field name="parentWatchCompanyid" class="java.lang.String"/>
+	<field name="phone" class="java.lang.String"/>
+	<field name="fax" class="java.lang.String"/>
+	<field name="tickerSymbol" class="java.lang.String"/>
+	<field name="reviewUser" class="java.lang.String"/>
+	<field name="websites" class="java.util.List"/>
+	<field name="dataSource" class="java.lang.String"/>
+	<field name="employees" class="java.lang.String"/>
+	<field name="yearFounded" class="java.lang.String"/>
+	<field name="numEmployees" class="java.lang.Long"/>
+	<field name="assets" class="java.lang.Long"/>
+	<field name="marketValue" class="java.lang.Long"/>
+	<field name="netWorth" class="java.lang.Long"/>
+	<field name="sales" class="java.lang.Long"/>
+	<field name="industryId" class="java.lang.String"/>
+	<field name="industryName" class="java.lang.String"/>
+	<field name="ownershipType" class="java.lang.String"/>
+	<field name="entityType" class="java.lang.String"/>
+	<field name="execs" class="java.util.List"/>
+	<field name="newsCoded" class="java.lang.Boolean"/>
+	<field name="changeFlag" class="java.lang.String"/>
+	<field name="companyHash" class="java.lang.String"/>
+	<pageHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="20" width="231" height="33" forecolor="#000000" backcolor="#F5F5F5" uuid="463780a9-2799-4018-b1e6-a3d5b7cc0596"/>
+				<textElement>
+					<font fontName="Calibri Light" size="18" isBold="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Company Overview]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="44" width="203" height="25" uuid="c00bbbc6-155e-4412-829a-130916ff50c3"/>
+				<textElement>
+					<font fontName="Calibri Light" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Due Diligence Report]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement x="0" y="68" width="595" height="1" uuid="ac9523a8-dd19-4a35-b4f0-648a84d70aba"/>
+				<graphicElement>
+					<pen lineWidth="8.0" lineColor="#FF8B17"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="630" splitType="Stretch">
+			<pieChart>
+				<chart isShowLegend="false">
+					<reportElement mode="Transparent" x="15" y="28" width="110" height="110" backcolor="#FFFFFF" uuid="d4dabea4-04a8-4d4c-bafb-5b627f12ae9c"/>
+					<chartTitle color="#000000">
+						<font size="12" isBold="true"/>
+						<titleExpression><![CDATA[]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle color="#000000">
+						<font fontName="Calibri Light"/>
+					</chartSubtitle>
+					<chartLegend textColor="#000000" backgroundColor="#FFFFFF">
+						<font fontName="Calibri Light"/>
+					</chartLegend>
+				</chart>
+				<pieDataset>
+					<pieSeries>
+						<keyExpression><![CDATA["Risk"]]></keyExpression>
+						<valueExpression><![CDATA[$P{risk_score}]]></valueExpression>
+						<labelExpression><![CDATA["Risk"]]></labelExpression>
+					</pieSeries>
+					<pieSeries>
+						<keyExpression><![CDATA["None"]]></keyExpression>
+						<valueExpression><![CDATA[100 - $P{risk_score}]]></valueExpression>
+					</pieSeries>
+				</pieDataset>
+				<piePlot>
+					<plot backcolor="#FFFFFF">
+						<seriesColor seriesOrder="0" color="#FF0000"/>
+						<seriesColor seriesOrder="1" color="#FFFFFF"/>
+					</plot>
+					<itemLabel>
+						<font fontName="Calibri Light" size="5"/>
+					</itemLabel>
+				</piePlot>
+			</pieChart>
+			<textField>
+				<reportElement x="69" y="71" width="21" height="23" backcolor="#FFFFFF" uuid="290a6937-1393-4aa3-b0a1-29bb800a7f76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri Light" size="10"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{risk_score}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="228" y="48" width="109" height="15" forecolor="#000000" uuid="5c5bfba5-5813-4d5a-80c8-0a2f83d91a4f"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}.getStreet1()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="230" y="60" width="59" height="15" forecolor="#000000" uuid="c5d9d636-b0f3-404c-8dc5-9cc027000ed5"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}.getCity()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="230" y="75" width="37" height="15" forecolor="#000000" uuid="59c36c72-ced7-4776-9b19-1a5f4b83e89a"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}.getState()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="88" width="72" height="15" forecolor="#000000" uuid="f03ba25d-c1e6-4af2-a246-5e1178246e04"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}.getCountry()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="102" width="72" height="15" forecolor="#000000" uuid="5d0727a7-1a4a-48a8-a749-6268812c80b6"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{phone}!=null?$F{phone}:"..."]]></textFieldExpression>
+			</textField>
+			<image isUsingCache="true">
+				<reportElement x="204" y="102" width="15" height="15" forecolor="#0000FF" uuid="c9dec6d4-ffc0-4d42-a107-718c07e5813b"/>
+				<imageExpression><![CDATA[$P{IMAGE_PATH}+"phone.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="224" y="8" width="57" height="20" forecolor="#000000" uuid="2ed6e75b-d591-48f0-a7e6-13ef49c027e8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri Light" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="269" y="75" width="54" height="15" forecolor="#000000" uuid="aee492d2-931d-49b1-9593-eb8a63331639"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}.getZip()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="37" y="150" width="85" height="29" uuid="b42d9032-83c1-4242-bf0d-0c3c278414e8"/>
+				<textElement>
+					<font fontName="Calibri Light" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="0" width="160" height="28" forecolor="#000000" uuid="bd4916d3-3948-42d3-942a-1935662b4bba"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Calibri Light" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Overall Risk Score]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement x="22" y="30" width="538" height="1" uuid="7a233e85-caf9-471f-98bb-73f6a9374b07"/>
+				<graphicElement>
+					<pen lineWidth="0.8" lineColor="#C0C0C0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="37" y="336" width="112" height="27" forecolor="#000000" uuid="d66e3993-dc03-4fc3-814a-c220f20252a1"/>
+				<textElement>
+					<font fontName="Calibri Light" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[Risk Summary]]></text>
+			</staticText>
+			<image isUsingCache="true">
+				<reportElement x="408" y="50" width="18" height="20" uuid="1f5d07c1-c009-43c5-a9de-c7741bd016ad"/>
+				<imageExpression><![CDATA[$P{IMAGE_PATH}+"website-icon.png"]]></imageExpression>
+			</image>
+			<line direction="BottomUp">
+				<reportElement x="26" y="364" width="540" height="1" uuid="8562ada5-b023-4026-8709-342e6a7986b1"/>
+				<graphicElement>
+					<pen lineWidth="0.8" lineColor="#C0C0C0"/>
+				</graphicElement>
+			</line>
+			<image isUsingCache="true">
+				<reportElement x="203" y="48" width="15" height="15" uuid="5e2cf943-5e57-430d-b312-780d9cb22acf"/>
+				<imageExpression><![CDATA[$P{IMAGE_PATH}+"location2.png"]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="37" y="178" width="518" height="15" forecolor="#626262" uuid="15ef603e-3b31-417d-ba17-65619d297a09"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}!=null?$F{description}:"No Description Available"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="440" y="48" width="72" height="15" forecolor="#000000" uuid="ac5cc7d3-8e0e-4df8-98ea-6c8eaef97653"/>
+				<textElement>
+					<font fontName="Calibri Light" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{websites}.toString().replaceAll("[\\[\\]]", "").trim().replaceAll(",", "\n")]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="37" y="378" width="518" height="113" uuid="9cee0936-998b-4764-b7cb-1be63523b1b1"/>
+				<c:list xmlns:c="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal" ignoreWidth="false">
+					<datasetRun subDataset="Subdataset_List" uuid="730a8e04-0656-4528-9b18-09b2d0572153">
+						<datasetParameter name="IMG_PATH">
+							<datasetParameterExpression><![CDATA[$P{IMAGE_PATH}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{flaggedKeyTerms})]]></dataSourceExpression>
+					</datasetRun>
+					<c:listContents height="56" width="225">
+						<textField>
+							<reportElement x="24" y="7" width="190" height="29" forecolor="#626262" uuid="7441e0d8-38de-4bb6-bcc7-ee57b386e137"/>
+							<textElement>
+								<font fontName="Calibri Light" isBold="true"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{flagKeyTerm}]]></textFieldExpression>
+						</textField>
+						<image isUsingCache="true">
+							<reportElement x="0" y="7" width="15" height="15" uuid="15f0a37f-27c1-4f1d-abb1-bfa5b50438e9"/>
+							<imageExpression><![CDATA[$P{IMG_PATH}+"exclamatory-img.png"]]></imageExpression>
+						</image>
+					</c:listContents>
+				</c:list>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>
